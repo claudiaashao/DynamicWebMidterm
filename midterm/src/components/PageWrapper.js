@@ -6,12 +6,13 @@ export default function PageWrapper({children}){
     const [sunrise, setSunrise] = useState('');
     const [sunset, setSunset] = useState('');
     const [noon, setNoon] = useState('');
-    // const [sunrise, setSunrise] = useState('');
+
+    const lat = 40.7128;
+    const lng = -74.0060;
 
     useEffect(()=>{
-        axios.get(`https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&formatted=0`)
+        axios.get(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&formatted=0`)
             .then(res => {
-            console.log(res);
             setSunrise(res.data.results.sunrise);
             setSunset(res.data.results.sunset);
             setNoon(res.data.results.solar_noon);
@@ -36,7 +37,7 @@ export default function PageWrapper({children}){
                 minHeight: '100vh',
                 width: '100%',
                 minWidth: '100vw',
-                backgroundColor:`rgba(${R},${G},${B},0.3)`,
+                backgroundColor:`rgba(${R},${G},${B},0.27)`,
             }    
         }>
              <div className='PageWrapper'>{children}</div>

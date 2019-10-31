@@ -6,17 +6,17 @@ import Home from './containers/home';
 import Plant from './containers/plant';
 
 
-
 export default function App() {
+
   return (
     <div className="App">
       <Router>
         <Route exact path="/" component={Home} />
-        <Route exact path="/plant" component={Plant} />
+        <Route exact path="/myplants" component={Plant} />
       </Router>
-
     </div>
   );
+
 }
 
 

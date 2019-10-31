@@ -13,7 +13,11 @@ export default function Home (props) {
                 <h1>PLANT PARENTHOOD</h1>
                 <p> Welcome to Plant Parenthood! Ready to be a parent? </p>
                 
-                <a href={`/plant`}>see all my plants</a>
+                <div class="buttons">
+                    <div class="container">
+                        <a href={`/myplants?plant=Mango`} class="btn effect01" target="_blank"><span>see all my kids</span></a>
+                    </div>
+                </div>
             </div> 
         </PageWrapper>
     )
